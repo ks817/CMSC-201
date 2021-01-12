@@ -55,19 +55,8 @@ print(type(q4))
 print(q4.__dict__)
 SUV.isNew(q4)
 
-#q1 again
-q5 = [x**3 if x%2!= 0 else x**2 for x in range(1,21)]
-print(q5)
 
-#q2
-str_list = ['UMBC', 'UMD', 'UMB', 'TU']
-#lamda parameter: expression
-q6 = filter(lambda x:len(x)>3, str_list)
-
-print(type(q6)) #check the type of filter " <class 'filter' "
-print(list(q6)) #print the actual list
-
-#q3
+# Q5
 
 #- Create 2 CollegeStudent objects, one that return True, another that returns false.
 #Call isStressed() to check if this is the case.
@@ -97,6 +86,7 @@ class Vafaei(CollegeStudent):
 student3 = Vafaei(True, "CMSC313", 16) #create obj
 print(Vafaei.isStressed(student3)) #print obj
 
+# Q7
 import numpy as np
 
 x = np.reshape([['a','b','c'], ['d','e','f'], ['g','h','i']],(3,3))
@@ -105,18 +95,16 @@ x
 
 array= ([['a', 'b', 'c'],
        ['d', 'e', 'f'],
-       ['g', 'h', 'i']])#, dtype='<U1')
+       ['g', 'h', 'i']])
 
 answer = x[::-1,::-1]
 print(answer)
 
+# Q8
 raw_scores = [{'student_name': 'John', 'raw_score': 8}, {'student_name': 'Mary', 'raw_score': 9}]  
 final_grades = map(lambda x: x['raw_score']*10, raw_scores)
 
 print(list(final_grades))
-#print(type(final_grades))
 
-#V#ehicle.isNew(q3)
-#Output:[80, 90]
 
 
