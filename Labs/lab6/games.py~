@@ -1,0 +1,34 @@
+# File:        games.py
+# Author:      Kusum Sharma
+# Date:        03/06/2019
+# Section:     25
+# E-mail:      ks17@umbc.edu
+# Description: This program contains a python code that displays different
+#              options for games, and will allow users to vote on their 
+#              favorite games.
+
+SENTINEL = 0
+
+def main():
+
+    games = ["Twister", "Dodgeball", "Capture the Flag", "Hide and Seek", "Croquet", "Ring Toss", "Ping Pong"]
+
+    count = 1
+    while len(games) >= count:
+        print(count, "-", games[count-1])
+        count += 1
+
+    votes = [0, 0, 0, 0, 0, 0, 0]
+    favGame = int(input("What is your favorite game? (Enter 0 to stop): "))
+    while favGame != SENTINEL:
+        count = 0
+        votes[favGame - 1] = (votes[favGame -1 )+ 1
+        count += 1
+        favGame = int(input("What is your favorite game? (Enter 0 to stop): "))
+    
+    index = 0
+    while len(games) > index:
+        print(games[index], "has", votes[index], "votes")
+        index += 1
+        
+main()
