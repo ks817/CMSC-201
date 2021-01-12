@@ -66,7 +66,7 @@ def average(nums):
     total = 0
     index = 0
     while index < len(nums):
-        total += nums[index]
+        total += num[index]
         index += 1
 
     avg = total / len(nums)
